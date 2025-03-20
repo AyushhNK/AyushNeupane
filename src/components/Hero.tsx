@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="absolute rounded-[50%] w-[3000px] h-[1300px] top-[550px] left-[50%] -translate-x-1/2 bg-[radial-gradient(closest-side,#000_80%,#2B1942)]"></div>
             <div className="relative">
                 <div className="text-8xl font-bold text-center">
-                    <h1 className="text-[#98B4CE]">HI, I am</h1>
+                    <h1 className="text-[#98B4CE]">HI&rsquo; I am</h1>
                     <h1 className="text-[#E4BA57]">Ayush Neupane</h1>
                 </div>
 
@@ -45,7 +45,7 @@ const Hero = () => {
                 </motion.div>
             
             <p className="text-center text-xl max-w-[500px] mx-auto mt-8 text-white/80">
-                I am a Backend devloper focused on creating api's and microservices for an interactive user experience.
+                I am a Backend devloper focused on creating api&#39;s and microservices for an interactive user experience.
             </p>
             <Image
             src={profilepic}
