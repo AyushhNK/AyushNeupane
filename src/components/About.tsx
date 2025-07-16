@@ -46,7 +46,7 @@ const About = () => {
                     <ul className='text-lg text-white/80 space-y-2 text-center'>
                         <li><span className='font-semibold'>Email:</span> neupaneayush3@gmail.com</li>
                         <li><span className='font-semibold'>Phone:</span> (+977) 9744388789</li>
-                        <li><span className='font-semibold'>Portfolio:</span> <a href="https://ayushneupanekhatri.up.railway.app/" className="text-orange-400 underline" target="_blank" rel="noopener noreferrer">ayushneupanekhatri.up.railway.app</a></li>
+                        <li><span className='font-semibold'>Portfolio:</span> <a href="https://ayush-neupane.vercel.app/" className="text-orange-400 underline" target="_blank" rel="noopener noreferrer">ayush-neupane.vercel.app</a></li>
                         <li><span className='font-semibold'>GitHub:</span> <a href="https://github.com/AyushhNK" className="text-orange-400 underline" target="_blank" rel="noopener noreferrer">github.com/AyushhNK</a></li>
                     </ul>
                 </div>

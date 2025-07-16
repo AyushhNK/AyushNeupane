@@ -1,7 +1,6 @@
 import React from 'react';
-import { FaReact, FaPython, FaGitAlt, FaGitlab } from 'react-icons/fa';
+import { FaReact, FaGitAlt } from 'react-icons/fa';
 import { SiDotnet, SiDjango, SiFastapi, SiRedux, SiTailwindcss, SiPostman, SiGithub } from 'react-icons/si';
-import { DiTerminal } from 'react-icons/di';
 
 const backendSkills = [
     { icon: <SiDotnet size={60} className="text-[#5f6fff]" />, label: ".NET" },

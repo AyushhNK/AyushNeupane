@@ -14,7 +14,7 @@ const Contact=()=>{
             <div className='max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-center relative z-10 gap-12'>
                 <div className='flex flex-col gap-6 w-full lg:w-1/2'>
                     <h2 className='text-5xl font-extrabold text-transparent bg-gradient-to-r from-orange-400 via-yellow-400 to-purple-500 bg-clip-text mb-2 drop-shadow-lg'>Let's Connect</h2>
-                    <p className='text-white/80 text-lg mb-6'>Feel free to reach out for collaboration, project inquiries, or just to say hi!</p>
+                    <p className='text-white/80 text-lg mb-6'>Send me a message and let&#39;s schedule a call</p>
                     <div className='flex flex-col gap-4'>
                         <div className='flex items-center gap-4 bg-white/10 border border-orange-400/20 rounded-2xl p-4 shadow-lg hover:bg-white/20 transition'>
                             <Image src={phone} alt="phone" className='h-12 w-12'/>
@@ -24,7 +24,7 @@ const Contact=()=>{
                             <Image src={mail} alt="mail" className='h-12 w-12'/>
                             <span className='text-xl font-semibold'>neupaneayush3@gmail.com</span>
                         </div>
-                        <a href="https://ayushneupanekhatri.up.railway.app/" target="_blank" rel="noopener noreferrer" className='flex items-center gap-4 bg-white/10 border border-orange-400/20 rounded-2xl p-4 shadow-lg hover:bg-white/20 transition'>
+                        <a href="https://ayush-neupane.vercel.app/" target="_blank" rel="noopener noreferrer" className='flex items-center gap-4 bg-white/10 border border-orange-400/20 rounded-2xl p-4 shadow-lg hover:bg-white/20 transition'>
                             <FaGlobe size={32} className='text-orange-400'/>
                             <span className='text-xl font-semibold text-orange-300'>Portfolio Site</span>
                         </a>
