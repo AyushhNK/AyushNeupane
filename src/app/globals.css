@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #0a1026;
+  --foreground: #f5f7fa;
+  --primary: #5f6fff;
+  --secondary: #a259ff;
+  --accent: #43e8d8;
+  --glass-bg: rgba(35, 40, 74, 0.7);
+  --glass-border: #5f6fff;
 }
 
 @theme inline {
@@ -14,8 +19,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a1026;
+    --foreground: #f5f7fa;
   }
 }
 
@@ -41,12 +46,20 @@ body {
   background-size:200% 200%;
 }
 
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in {
+  animation: fade-in 1s cubic-bezier(0.4,0,0.2,1);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
-  background: #181818;
+  background: #23284a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #381a5f;
+  background: #5f6fff;
   border-radius: 8px;
 }
 

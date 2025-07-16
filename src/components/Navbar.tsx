@@ -1,86 +1,66 @@
 "use client";
 import Link from "next/link";
-import React,{useState} from "react";
-import {AiOutlineMenu,AiOutlineClose} from "react-icons/ai";
-import {motion} from "framer-motion";
+import React, { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks=[
-    {title:"About",path:"#about"},
-    {title:"Portfolio",path:"#portfolio"},
-
+const navLinks = [
+    { title: "About", path: "#about" },
+    { title: "Portfolio", path: "#portfolio" },
+    { title: "Contact", path: "#contact" },
 ];
 
 const Navbar = () => {
-    const [nav,setNav]=useState(false);
-    
-    const toggleNav=()=>{
-        setNav(!nav);
-    }
-    
-    const closeNav=()=>{
-        setNav(false);
-    }
+    const [nav, setNav] = useState(false);
 
-    const menuVariants={
-        open:{
-            x:0,
-            transition:{
-                stiffness:20,
-                damping:15
-            }
-        },
-        closed:{
-            x:"-100%",
-            transition:{
-                stiffness:20,
-                damping:15
-            }
-        },
-    }
+    const toggleNav = () => setNav(!nav);
+    const closeNav = () => setNav(false);
+
     return (
-        <div className="text-white/70 pt-6">
-            <div className="hidden md:flex items-center px-4 py-2 mx-auto max-w-[400px]">
-                <ul className="flex flex-row p-4 space-x-8">
-                    {navLinks.map((link,index)=>(
+        <nav className="fixed top-0 left-0 w-full z-50 bg-[var(--glass-bg)]/90 backdrop-blur-lg shadow-xl border-b-2 border-b-gradient-to-r from-[#5f6fff] via-[#a259ff] to-[#43e8d8]">
+            <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+                {/* Logo/Name */}
+                <a href="#hero" className="text-2xl font-extrabold bg-gradient-to-r from-[#5f6fff] via-[#a259ff] to-[#43e8d8] bg-clip-text text-transparent drop-shadow-lg tracking-tight">Ayush NK</a>
+                {/* Desktop Nav */}
+                <ul className="hidden md:flex items-center gap-10">
+                    {navLinks.map((link, index) => (
                         <li key={index}>
-                            <Link href={link.path}>
-                                <p>{link.title}</p>
+                            <Link href={link.path} className="relative group text-lg font-semibold text-white/90 px-2 py-1 transition">
+                                <span>{link.title}</span>
+                                <span className="block h-0.5 w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-[#5f6fff] via-[#a259ff] to-[#43e8d8] rounded-full mt-1"></span>
                             </Link>
                         </li>
                     ))}
-                    <li>
-                        <a href="#contact" className="group">
-                            <h1 className="text-lg font-bold text-white/70 cursor-pointer">Contact Me</h1>
-                            <div className="relative">
-                                <div className="absolute w-2/3 h-1 transition-all duration-300 ease-out bg-orange-400 rounded-full group-hover:w-full"></div>
-                                <div className="mt-1 absolute w-1/3 h-1 transition-all duration-300 ease-out bg-orange-600 rounded-full group-hover:w-full"></div>
-                            </div>
-                        </a>
-                    </li>
                 </ul>
+                {/* Mobile Menu Button */}
+                <div onClick={toggleNav} className="md:hidden flex items-center justify-center border border-white/20 rounded-full text-white/80 p-2 cursor-pointer transition hover:bg-white/10">
+                    {nav ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
+                </div>
             </div>
-            <div onClick={toggleNav} className="md:hidden absolute top-5 right-5 border rounded text-white/70 border-white/70 p-2 z-50">
-                {nav ? <AiOutlineClose size={30}/> : <AiOutlineMenu size={30}/>}
-            </div>
-
-            <motion.div 
-                initial={false}
-                animate={nav ? "open" : "closed"}
-                variants={menuVariants}
-                className="fixed left-0 top-0 w-full z-40 bg-black/90">
-                    <ul className="text-4xl font-semibold my-24 text-center space-y-8">
-                        {navLinks.map((link,index)=>(
-                            <li key={index}>
-                                <Link href={link.path}  onClick={closeNav}>
-                                    {link.title}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-            </motion.div>
-
-        </div>
-        )
+            {/* Mobile Dropdown */}
+            <AnimatePresence>
+                {nav && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.25 }}
+                        className="fixed inset-0 z-40 bg-[var(--glass-bg)]/95 backdrop-blur-2xl flex flex-col items-center justify-center md:hidden border-t-4 border-t-gradient-to-r from-[#5f6fff] via-[#a259ff] to-[#43e8d8]"
+                    >
+                        <ul className="flex flex-col items-center gap-10 text-3xl font-semibold">
+                            {navLinks.map((link, index) => (
+                                <li key={index}>
+                                    <Link href={link.path} onClick={closeNav} className="bg-gradient-to-r from-[#5f6fff] via-[#a259ff] to-[#43e8d8] bg-clip-text text-transparent hover:text-[#43e8d8] transition-colors duration-200">
+                                        {link.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
+    );
 };
 
 export default Navbar;
