@@ -6,43 +6,59 @@ import project1 from '../assets/proj2.jpg';
 
 const projects=[
     {
-        title:"Project 1",
-        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-        devstack:"React, TailwindCSS, Framer Motion",
-        link:"#",
-        git:"#",
+        title:"Service Provider Platform",
+        desc:"A robust and user-friendly platform for connecting service providers with customers, enabling service listings, bookings, and payments.",
+        devstack:"Django, Django REST Framework, React, Tailwind CSS",
+        link:"#", // Add live link if available
+        git:"https://github.com/AyushhNK/service-provider-platform",
         src:project1
     },
     {
-        title:"Project 2",
-        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-        devstack:"React, TailwindCSS, Framer Motion",
-        link:"#",
-        git:"#",
+        title:"Korean Color Analysis App",
+        desc:"Interactive web app for personalized fashion recommendations based on Korean color theory, analyzing users' features to suggest matching outfits from Amazon.",
+        devstack:"Django, Django REST Framework, React, Tailwind CSS",
+        link:"#", // Add live link if available
+        git:"https://github.com/AyushhNK/korean-color-analysis",
         src:project1
     },
     {
-        title:"Project 3",
-        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-        devstack:"React, TailwindCSS, Framer Motion",
-        link:"#",
-        git:"#",
+        title:"Doctor Appointment System",
+        desc:"Web application for patients to book appointments with doctors, view available time slots, and receive reminders. Simplifies scheduling for both patients and healthcare providers.",
+        devstack:"Django, React, MySQL",
+        link:"#", // Add live link if available
+        git:"https://github.com/AyushhNK/doctor-appointment-system",
         src:project
     },
     {
-        title:"Project 4",
-        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.",
-        devstack:"React, TailwindCSS, Framer Motion",
-        link:"#",
-        git:"#",
+        title:"Ecommerce Site",
+        desc:"Online platform for users to browse and purchase products, manage their shopping cart, and track orders. Features product search, user reviews, and secure payment processing.",
+        devstack:"Django, Jinja, SQLite",
+        link:"#", // Add live link if available
+        git:"https://github.com/AyushhNK/ecommerce-site",
         src:project1
-    }
+    },
+    {
+        title:"Gym Management Site",
+        desc:"Modern and responsive UI for gym members to view schedules, book classes, manage memberships, and track progress.",
+        devstack:"Django, Django REST Framework, React, Tailwind CSS",
+        link:"#", // Add live link if available
+        git:"https://github.com/AyushhNK/gym-management-site",
+        src:project1
+    },
+    {
+        title:"Social Media App",
+        desc:"Platform enabling users to create profiles, share posts, connect with friends, real-time notifications, news feed, and direct messaging.",
+        devstack:"Django, Django REST Framework, WebSocket, Jinja",
+        link:"#", // Add live link if available
+        git:"https://github.com/AyushhNK/social-media-app",
+        src:project1
+    },
 ]
 
 const Portfolio = () => {
     return (
         <div className='text-white bg-gradient-to-b from-black to-[#381a5f] py-18 mt-52' id="portfolio">
-            <h1 className='text-white text-6xl max-w-[320px] mx-auto font-semibold my-12'>Selected <span className='text-orange-400'>Project</span></h1>
+            <h1 className='text-white text-6xl max-w-[420px] mx-auto font-extrabold my-12 text-center bg-gradient-to-r from-yellow-400 via-orange-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg'>Selected <span className='text-orange-400'>Projects</span></h1>
             <div className='max-w-[1200px] mx-auto mt-40 space-y-24'>
                 {projects.map((project,index)=>(
                     <motion.div
