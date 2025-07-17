@@ -2,7 +2,10 @@
 import Image from 'next/image';
 import {motion} from 'framer-motion';
 import project from '../assets/proj3.png';
-import project1 from '../assets/proj2.jpg';
+import project1 from '../assets/proj1.jpg';
+import project2 from '../assets/proj2.jpg';
+import project4 from '../assets/proj4.jpg';
+import project5 from '../assets/proj5.jpg';
 
 const projects=[
     {
@@ -19,7 +22,7 @@ const projects=[
         devstack:"Django, Django REST Framework, React, Tailwind CSS",
         link:"#", // Add live link if available
         git:"https://github.com/AyushhNK/korean-color-analysis",
-        src:project1
+        src:project2
     },
     {
         title:"Doctor Appointment System",
@@ -35,7 +38,7 @@ const projects=[
         devstack:"Django, Jinja, SQLite",
         link:"#", // Add live link if available
         git:"https://github.com/AyushhNK/ecommerce-site",
-        src:project1
+        src:project4
     },
     {
         title:"Gym Management Site",
@@ -43,7 +46,7 @@ const projects=[
         devstack:"Django, Django REST Framework, React, Tailwind CSS",
         link:"#", // Add live link if available
         git:"https://github.com/AyushhNK/gym-management-site",
-        src:project1
+        src:project5
     },
     {
         title:"Social Media App",
