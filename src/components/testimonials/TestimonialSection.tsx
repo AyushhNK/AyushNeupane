@@ -33,14 +33,14 @@ export default function TestimonialSection() {
             <div>
                 <Header title="Testimonials" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8
-                w-[90%] sm:w-[80%] mx-auto mt-12">
+                w-[90%] sm:w-[80%] mx-auto mt-12 opacity-90">
                     {testimonials.map((testimonial, index) => {
                         return (
                             <div 
                                 key={index}
                                 data-aos="fade-right"
                                 data-aos-delay={index * 200}
-                                className="bg-gray-800  border border-gray-700 rounded-xl p-6 shadow-lg">
+                                className="bg-[#393E46] border border-gray-700 rounded-xl p-6 shadow-lg">
                                 <div className="flex items-center mb-4">
                                     {[...Array(5)].map((_, index) => (
                                         <FaStar key={index} className={`w-4 h-4 ${index < testimonial.rating ? "text-yellow-400" : "text-gray-600"

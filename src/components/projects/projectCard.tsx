@@ -14,10 +14,10 @@ export default function ProjectCard({ title, description, imagePath }: ProjectCa
                 alt="project-image"
                 width={800}
                 height={600}
-                className="rounded-lg"
+                className="rounded-lg opacity-90"
                 />
-                <p className="my-4 text-xl sm:text-2xl font-semibold text-gray-200">{title}</p>
-                <p className="font-medium text-gray-400">{description}</p>
+                <p className="my-4 text-xl sm:text-2xl font-semibold text-[#EEEEEE]">{title}</p>
+                <p className="font-medium text-[#EEEEEE]">{description}</p>
             </div>
         )
 }

@@ -35,8 +35,7 @@ export default function LinkButton({
         })}
         href="href" 
         download={download} 
-        className={`px-8 py-3  bg-linear-to-r from-blue-900
-        to-purple-800 hover:from-blue-800 hover:to-purple-700
+        className={`px-8 py-3  bg-linear-to-r from-[#00ADB5] to-[#393E46] hover:from-[#00ADB5] hover:to-[#393E46]
         text-white font-medium
         transition-all duration-300
         hover:scale-[1.02] active:scale-[0.98]

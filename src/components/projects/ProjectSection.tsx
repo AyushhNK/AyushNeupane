@@ -7,7 +7,7 @@ export default function ProjectSection() {
         <section id="projects">
             <Header title="My Projects" as="h2" />
             <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10
-            overflow-hidden">
+            ">
                 <div data-aos="fade-right">
                     <ProjectCard 
                 title="Modern Dashboard UI" 

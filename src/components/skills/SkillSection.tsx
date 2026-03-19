@@ -30,14 +30,14 @@ export default function SkillSection() {
     return (
         <section id="skills" className="py-16">
             <Header title="My Skills"/>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-6 opacity-90">
                 {skills.map((skill, index)=>{
                     return (
                         <div 
                         key={index} 
                         data-aos="flip-right"
                         data-aos-delay={index*200}
-                        className="bg-slate-900 text-center w-40 h-48 rounded-3xl
+                        className="bg-[#393E46] text-center w-40 h-48 rounded-3xl
                         flex flex-col items-center justify-center shadow-lg transition:hover:scale-110">
                             <div className="text-5xl text-gray-300">
                                 {skill.icon}
@@ -45,7 +45,7 @@ export default function SkillSection() {
                             <p className="text-2xl font-semibold my-4 text-gray-200">
                                 {skill.skillLevel}%
                             </p>
-                            <p className="text-indigo-500 font-semibold">
+                            <p className="text-[#00ADB5] font-semibold">
                                 {skill.name}
                             </p>
                         </div>

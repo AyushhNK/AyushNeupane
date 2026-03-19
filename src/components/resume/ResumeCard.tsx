@@ -9,10 +9,10 @@ interface ResumeCardProps {
 
 export default function ResumeCard({role, icon:Icon, date, description}: ResumeCardProps) {
     return (
-        <div className="flex items-start space-x-6 bg-blue-950/20 p-4 sm:p-8 rounded-md mx-2">
-            <div className="w-10 h-10 sm:w-14 sm:h-14 bg-blue-950 rounded-full grid
+        <div className="flex items-start space-x-6 bg-[#393E46] p-4 sm:p-8 rounded-md mx-2 opacity-90">
+            <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#00ADB5] rounded-full grid
             place-items-center">
-                <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-gray-200" />
+                <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#EEEEEE]" />
             </div>
             <div className="flex-1">
                 {date && (

@@ -4,7 +4,7 @@ export default function AnimatedIntro() {
         <div data-aos="fade-up" data-aos-delay="400" className="text-lg sm:text-2xl h-30 px-8 text-center font-medium
         text-gray-400">
             Hi I&apos;m Ayush, a passionate
-            <span className="text-indigo-400 font-bold">
+            <span className="text-[#00ADB5] font-bold">
                 <TypeWriter
                 options={{
                     strings:[

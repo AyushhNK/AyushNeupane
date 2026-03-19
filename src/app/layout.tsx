@@ -26,9 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased bg-slate-950`}
+        className={`${poppins.className} antialiased bg-[#222831] text-[#EEEEEE]`}
       >
         <Navbar />
+        
         {children}
         <Footer />
         <ScrollToTop/>

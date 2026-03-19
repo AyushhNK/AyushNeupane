@@ -1,10 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Portfolio from "@/components/Portfolio";
-import Skills from "@/components/Skills";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/hero/HeroSection";
 import ServiceSection from "@/components/services/ServiceSection";
 import ResumeSection from "@/components/resume/ResumeSection";
@@ -14,9 +7,11 @@ import TestimonialSection from "@/components/testimonials/TestimonialSection";
 import ContactSection from "@/components/contacts/ContactSection";
 import AnimationLayout from "../../layouts/AnimationLayout";
 
+
 export default function Home() {
   return (
     <AnimationLayout>
+
       <HeroSection />
       <ServiceSection />
       <ResumeSection />
@@ -24,6 +19,7 @@ export default function Home() {
       <SkillSection />
       <TestimonialSection />
       <ContactSection />
+      
     </AnimationLayout>
     // <>
     //   {/* <Navbar />
