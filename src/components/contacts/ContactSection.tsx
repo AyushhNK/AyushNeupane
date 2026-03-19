@@ -6,20 +6,20 @@ const contactInfo=[
     {
         icon:<FaEnvelope className="w-6 h-6"/>,
         title:"Email",
-        value:"contact@example.com",
-        link:"mailto:contact@example.com",
+        value:"neupaneayush3@gmail.com",
+        link:"mailto:neupaneayush3@gmail.com",
     },
     {
         icon:<FaPhone className="w-6 h-6"/>,
         title:"Phone",
-        value:"+1234567890",
-        link:"tel:+1234567890",
+        value:"(+977)9744388789",
+        link:"tel:(+977)9744388789",
     },
     {
         icon:<FaMapMarkerAlt className="w-6 h-6"/>,
         title:"Location",
-        value:"San Francisco, CA",
-        link:"https://maps.google.com/?q=San Francisco, CA"
+        value:"Bafal, Kathmandu, Nepal",
+        link:"https://maps.google.com/?q=Bafal, Kathmandu, Nepal"
     },
 ]
 export default function ContactSection() {

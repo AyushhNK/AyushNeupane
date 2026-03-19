@@ -2,26 +2,33 @@ import { DiJavascript, DiPython } from "react-icons/di";
 import Header from "../general/Header";
 import { FaNodeJs } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
+import {  SiApachekafka, SiDjango,SiExpress,SiReact} from "react-icons/si";
+
 
 const skills=[
+    {
+        name:"Django",
+        icon:<SiDjango/>,
+        skillLevel:90,
+    },
     {
         name:"Python",
         icon:<DiPython/>,
         skillLevel:85,
     },
     {
-        name:"JavaScript",
-        icon:<DiJavascript/>,
+        name:"Express js",
+        icon:<SiExpress />,
         skillLevel:90,
     },
     {
-        name:"Node js",
-        icon:<FaNodeJs/>,
+        name:"React js",
+        icon:<SiReact/>,
         skillLevel:80,
     },
     {
-        name:"Next js",
-        icon:<RiNextjsFill/>,
+        name:"Apache Kafka",
+        icon:<SiApachekafka />,
         skillLevel:80,
     }
 ]

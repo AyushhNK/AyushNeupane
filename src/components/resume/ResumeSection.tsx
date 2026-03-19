@@ -1,7 +1,7 @@
 import { LuGraduationCap } from "react-icons/lu";
 import Header from "../general/Header";
 import ResumeCard from "./ResumeCard";
-import { RiNextjsFill } from "react-icons/ri";
+import { SiDjango } from "react-icons/si";
 
 export default function ResumeSection() {
     return (
@@ -12,38 +12,29 @@ export default function ResumeSection() {
                     <div className="space-y-6">
                         <ResumeCard 
                         icon={LuGraduationCap}
-                        role="Bachelor of Science in Computer Science"
-                        description="Graduated with honors from the University of Technology." 
-                        date="jan 2020 - April 2025"/>
+                        role="Bachelor of Science in Computer Science And Information Technology"
+                        description="Bhaktapur Multiple Campus, Tribhuvan University, Nepal." 
+                        date="2020 - 2025"/>
                         <ResumeCard 
                         icon={LuGraduationCap}
-                        role="Bachelor of Science in Computer Science"
-                        description="Graduated with honors from the University of Technology." 
-                        date="jan 2020 - April 2025"/>
+                        role="+2 in Science"
+                        description="Greenfield National Higher Secondary School, Nepal." 
+                        date="2018 - 2020"/>
                         <ResumeCard 
                         icon={LuGraduationCap}
-                        role="Bachelor of Science in Computer Science"
-                        description="Graduated with honors from the University of Technology." 
-                        date="jan 2020 - April 2025"/>
+                        role="Secondary Evaluation Examination"
+                        description="Greenfield National Higher Secondary School, Nepal." 
+                        date=" - 2018"/>
                     </div>
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="200">
                     <Header title="My Work Experience" as="h2" />
                     <div className="space-y-6">
                         <ResumeCard 
-                        icon={RiNextjsFill}
-                        role="Software Engineer"
-                        description="Worked as a software engineer at a tech company." 
-                        />
-                        <ResumeCard 
-                        icon={RiNextjsFill}
-                        role="Software Engineer"
-                        description="Worked as a software engineer at a tech company." 
-                        />
-                        <ResumeCard 
-                        icon={RiNextjsFill}
-                        role="Software Engineer"
-                        description="Worked as a software engineer at a tech company." 
+                        icon={SiDjango}
+                        role="Junior Backend Developer"
+                        description="Factdigi pvt ltd, Nepal." 
+                        date="sep 2024 - present"
                         />
                     </div>
                 </div>
