@@ -1,4 +1,4 @@
-import { image } from "framer-motion/client";
+
 import Header from "../general/Header";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";

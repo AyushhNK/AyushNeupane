@@ -1,8 +1,6 @@
 import Link from "next/link"
-import { title } from "process"
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa"
 import { LuSend } from "react-icons/lu"
-import { text } from "stream/consumers"
 
 const contactInfo=[
     {
