@@ -24,10 +24,12 @@ export default function ScrollToTop() {
     return (
         <>
         {showButton && (
-            <button onClick={scrollToTop} className="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full w-12 h-12 bg-slate-800 cursor-pointer text-white
-            rounded-full grid place-items-center fixed bottom-4 right-4">
-            <FaArrowUp className=""/>
-        </button>   
+            <button onClick={scrollToTop} className="fixed bottom-4 right-4 z-40 w-12 h-12
+            bg-[#031b2e]/80 backdrop-blur-md border border-[#2dd4bf]/20 text-[#2dd4bf]
+            shadow-[0_0_16px_-4px_rgba(45,212,191,0.5)] cursor-pointer
+            rounded-full grid place-items-center hover:border-[#2dd4bf]/60 transition-colors duration-300">
+            <FaArrowUp/>
+        </button>
         )
         }
         

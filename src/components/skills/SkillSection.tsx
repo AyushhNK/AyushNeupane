@@ -1,8 +1,7 @@
-import { DiJavascript, DiPython } from "react-icons/di";
+import { DiPython } from "react-icons/di";
 import Header from "../general/Header";
-import { FaNodeJs } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
 import {  SiApachekafka, SiDjango,SiExpress,SiReact} from "react-icons/si";
+import TiltCard from "../general/TiltCard";
 
 
 const skills=[
@@ -40,21 +39,19 @@ export default function SkillSection() {
             <div className="flex flex-wrap justify-center gap-6 opacity-90">
                 {skills.map((skill, index)=>{
                     return (
-                        <div 
-                        key={index} 
-                        data-aos="flip-right"
-                        data-aos-delay={index*200}
-                        className="bg-[#393E46] text-center w-40 h-48 rounded-3xl
-                        flex flex-col items-center justify-center shadow-lg transition:hover:scale-110">
-                            <div className="text-5xl text-gray-300">
-                                {skill.icon}
-                            </div>
-                            <p className="text-2xl font-semibold my-4 text-gray-200">
-                                {skill.skillLevel}%
-                            </p>
-                            <p className="text-[#00ADB5] font-semibold">
-                                {skill.name}
-                            </p>
+                        <div key={index} data-aos="flip-right" data-aos-delay={index*200}>
+                            <TiltCard className="hud-frame glass-panel text-center w-40 h-48 rounded-3xl
+                            flex flex-col items-center justify-center">
+                                <div className="text-5xl text-[#2dd4bf]">
+                                    {skill.icon}
+                                </div>
+                                <p className="font-heading text-2xl font-semibold my-4 text-gray-200">
+                                    {skill.skillLevel}%
+                                </p>
+                                <p className="text-[#e6b94d] font-semibold">
+                                    {skill.name}
+                                </p>
+                            </TiltCard>
                         </div>
                     )
                 })}

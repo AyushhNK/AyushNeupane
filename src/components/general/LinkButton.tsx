@@ -33,10 +33,12 @@ export default function LinkButton({
             "data-aos": aosType,
             "data-aos-delay": aosDelay,
         })}
-        href={href} 
-        download={download} 
-        className={`px-8 py-3  bg-linear-to-r from-[#00ADB5] to-[#393E46] hover:from-[#00ADB5] hover:to-[#393E46]
-        text-white font-medium
+        href={href}
+        download={download}
+        className={`px-8 py-3 bg-linear-to-r from-[#2dd4bf] to-[#e6b94d]
+        text-[#031b2e] font-semibold
+        shadow-[0_0_18px_-4px_rgba(45,212,191,0.6)]
+        hover:shadow-[0_0_28px_-2px_rgba(230,185,77,0.75)]
         transition-all duration-300
         hover:scale-[1.02] active:scale-[0.98]
         inline-flex items-center justify-center gap-2

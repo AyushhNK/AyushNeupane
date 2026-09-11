@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TiltCard from "@/components/general/TiltCard";
 
 interface ProjectCardProps {
     title:string;
@@ -8,16 +9,18 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, imagePath }: ProjectCardProps){
         return (
-            <div>
-                <Image
-                src={imagePath}
-                alt="project-image"
-                width={800}
-                height={600}
-                className="rounded-lg opacity-90"
-                />
-                <p className="my-4 text-xl sm:text-2xl font-semibold text-[#EEEEEE]">{title}</p>
-                <p className="font-medium text-[#EEEEEE]">{description}</p>
-            </div>
+            <TiltCard className="hud-frame glass-panel rounded-xl p-4 h-full">
+                <div className="overflow-hidden rounded-lg">
+                    <Image
+                    src={imagePath}
+                    alt="project-image"
+                    width={800}
+                    height={600}
+                    className="rounded-lg transition-transform duration-500 hover:scale-105"
+                    />
+                </div>
+                <p className="font-heading my-4 text-xl sm:text-2xl font-semibold text-[#eaf6f6]">{title}</p>
+                <p className="font-medium text-gray-300">{description}</p>
+            </TiltCard>
         )
 }

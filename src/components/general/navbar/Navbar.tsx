@@ -32,7 +32,7 @@ export default function Navbar() {
         }
     }, [])
     return (
-        <nav className={`h-18 fixed z-50 w-full transition-all duration-300 ${navBackground ? "bg-slate-900 shadow-md" : ""}`}>
+        <nav className={`h-18 fixed z-50 w-full transition-all duration-300 ${navBackground ? "bg-[#031b2e]/75 backdrop-blur-md border-b border-[#2dd4bf]/10 shadow-[0_4px_30px_-10px_rgba(45,212,191,0.15)]" : ""}`}>
             <div className="h-18 fixed z-50 w-full">
                 <div className="flex items-center h-full justify-between w-[90%] mx-auto">
                     <Logo />
@@ -40,7 +40,7 @@ export default function Navbar() {
                     <ul className="hidden lg:flex space-x-10">
                         {navLinks.map((link, index) => (
                             <li key={index} className="">
-                                <Link className="text-gray-200 hover:text-cyan-300 font-medium transition-colors duration-300" href={link.url}>{link.label}</Link>
+                                <Link className="text-gray-200 hover:text-[#2dd4bf] font-medium transition-colors duration-300" href={link.url}>{link.label}</Link>
                             </li>
                         ))}
 

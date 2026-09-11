@@ -2,6 +2,7 @@
 import Header from "../general/Header";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
+import TiltCard from "../general/TiltCard";
 
 const testimonials = [
     {
@@ -36,11 +37,11 @@ export default function TestimonialSection() {
                 w-[90%] sm:w-[80%] mx-auto mt-12 opacity-90">
                     {testimonials.map((testimonial, index) => {
                         return (
-                            <div 
+                            <TiltCard
                                 key={index}
                                 data-aos="fade-right"
                                 data-aos-delay={index * 200}
-                                className="bg-[#393E46] border border-gray-700 rounded-xl p-6 shadow-lg">
+                                className="hud-frame glass-panel rounded-xl p-6">
                                 <div className="flex items-center mb-4">
                                     {[...Array(5)].map((_, index) => (
                                         <FaStar key={index} className={`w-4 h-4 ${index < testimonial.rating ? "text-yellow-400" : "text-gray-600"
@@ -54,14 +55,14 @@ export default function TestimonialSection() {
                                 <div className="flex items-center gap-3">
                                     <div className="relative w-10 h-10 rounded-full">
                                         <Image src={testimonial.image} alt="testimonial-pic"
-                                            className="object-cover rounded-full" fill />
+                                            className="object-cover rounded-full" fill sizes="40px" />
                                     </div>
                                     <div className="py-4">
                                         <h4 className="font-bold text-white">{testimonial.name}</h4>
                                         <p className="text-sm text-gray-400">{testimonial.role}</p>
                                     </div>
                                 </div>
-                            </div>
+                            </TiltCard>
                         )
                     })}
                 </div>

@@ -1,8 +1,94 @@
 @import "tailwindcss";
 
-/* particles */
-.particles-container {
+:root {
+  --bg-deep: #031b2e;
+  --bg-panel: #0a2e40;
+  --accent-teal: #2dd4bf;
+  --accent-gold: #e6b94d;
+  --text-primary: #eaf6f6;
+}
+
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.25);
+  color: #ffffff;
+}
+
+/* glass surface used for cards / panels across the site */
+.glass-panel {
+  background: linear-gradient(
+    160deg,
+    rgba(230, 185, 77, 0.08),
+    rgba(45, 212, 191, 0.03)
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(45, 212, 191, 0.12);
+  transition: border-color 300ms ease, box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+  box-shadow: 0 0 24px -6px rgba(45, 212, 191, 0.35);
+}
+
+/* brass corner rivets, like a ship's porthole plate */
+.hud-frame {
   position: relative;
-  width: 100%;
-  height: 100%;
+}
+
+.hud-frame::before,
+.hud-frame::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--accent-gold);
+  opacity: 0.55;
+  transition: opacity 300ms ease, width 300ms ease, height 300ms ease;
+  pointer-events: none;
+}
+
+.hud-frame::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hud-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+.hud-frame:hover::before,
+.hud-frame:hover::after {
+  opacity: 1;
+  width: 22px;
+  height: 22px;
+}
+
+/* thin flanking accent divider used under section headings */
+.accent-divider {
+  height: 1px;
+  width: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-teal)
+  );
+}
+
+.accent-divider.reverse {
+  background: linear-gradient(
+    270deg,
+    transparent,
+    var(--accent-gold)
+  );
 }

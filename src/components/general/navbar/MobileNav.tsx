@@ -15,16 +15,16 @@ export default function MobileNav({navOpen}:MobileNavProps) {
                 transition-all duration-500 ${showMobileNav} lg-hidden`}></div>
             <ul className={`fixed flex items-center justify-center text-white
             flex-col h-full transform transition-all duration-500 dalay-300
-            w-[80%] sm:w-[60%] bg-slate-800 space-y-1 z-80 right-0 top-0 ${showMobileNav} lg:hidden`}>
+            w-[80%] sm:w-[60%] bg-[#031b2e]/95 backdrop-blur-xl border-l border-[#2dd4bf]/10 space-y-1 z-80 right-0 top-0 ${showMobileNav} lg:hidden`}>
                 {navLinks.map((link) => {
                     return(
                         <li key={link.url}>
                             <Link href={link.url} className="flex justify-center
                             items-center text-xl
                             font-medium text-white py-4 px-6
-                            rounded-lg hover:bg-slate-700/50
-                            hover:text-cyan-300 transition-all duration-300 border-b
-                            border-slate-700/30 w-full text-center">{link.label}</Link>
+                            rounded-lg hover:bg-[#2dd4bf]/5
+                            hover:text-[#2dd4bf] transition-all duration-300 border-b
+                            border-white/5 w-full text-center">{link.label}</Link>
                         </li>
                     )}
                 )}
